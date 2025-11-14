@@ -39,6 +39,28 @@ h1.card-title {
     padding-right: 10px;
 }
 
+/* Clickable task text for editing */
+.task-item .task-text:hover {
+    text-decoration: underline;
+    color: #667eea;
+}
+
+/* Edit mode styling */
+.task-item-editing {
+    background-color: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+/* Edit mode input */
+.task-item-editing input {
+    flex-grow: 1;
+}
+
+/* Button gap utility */
+.gap-2 {
+    gap: 0.5rem;
+}
+
 /* Delete button styling */
 .task-item .btn-danger {
     transition: all 0.2s ease;
