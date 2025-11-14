@@ -1,4 +1,4 @@
-# Task List Demo - Static Website
+# TaskManager - Static Website
 
 A simple, clean task list application built with vanilla HTML, CSS, and JavaScript. This project demonstrates local storage functionality and can be easily hosted on GitHub Pages.
 

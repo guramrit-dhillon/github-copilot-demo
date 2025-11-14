@@ -1,4 +1,4 @@
-// Task List App - Simple JavaScript Implementation
+// TaskManager - Simple JavaScript Implementation
 // This app manages tasks using localStorage for persistence
 
 // Get references to DOM elements
