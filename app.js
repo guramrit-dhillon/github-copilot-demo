@@ -5,9 +5,41 @@
 const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
 const taskList = document.getElementById('taskList');
+const darkModeToggle = document.getElementById('darkModeToggle');
 
 // Initialize tasks array
 let tasks = [];
+
+/**
+ * Load dark mode preference from localStorage
+ */
+function loadDarkModePreference() {
+    const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
+    if (darkModeEnabled) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀️';
+    } else {
+        darkModeToggle.textContent = '🌙';
+    }
+}
+
+/**
+ * Toggle dark mode on and off
+ */
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
+    // Save preference to localStorage
+    if (isDarkMode) {
+        localStorage.setItem('darkMode', 'enabled');
+        darkModeToggle.textContent = '☀️';
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+        darkModeToggle.textContent = '🌙';
+    }
+}
 
 /**
  * Load tasks from localStorage when the page loads
@@ -267,5 +299,11 @@ taskInput.addEventListener('keypress', (e) => {
     }
 });
 
-// Load tasks when page loads
-document.addEventListener('DOMContentLoaded', loadTasks);
+// Toggle dark mode when button is clicked
+darkModeToggle.addEventListener('click', toggleDarkMode);
+
+// Load tasks and dark mode preference when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    loadDarkModePreference();
+    loadTasks();
+});

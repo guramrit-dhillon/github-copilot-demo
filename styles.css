@@ -98,6 +98,74 @@ h1.card-title {
     background-color: #f8f9fa;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .card {
+    background-color: #0f3460;
+    color: #e4e4e4;
+}
+
+body.dark-mode h1.card-title {
+    color: #e4e4e4;
+}
+
+body.dark-mode .form-control {
+    background-color: #1a1a2e;
+    border-color: #533483;
+    color: #e4e4e4;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #1a1a2e;
+    border-color: #667eea;
+    color: #e4e4e4;
+}
+
+body.dark-mode .list-group-item {
+    background-color: #16213e;
+    border-color: #533483;
+    color: #e4e4e4;
+}
+
+body.dark-mode .task-item:hover {
+    background-color: #1a1a2e;
+    border-left-color: #667eea;
+}
+
+body.dark-mode .task-item-editing {
+    background-color: #2d2d44;
+    border-left-color: #ffc107;
+}
+
+body.dark-mode .list-group-item.text-muted {
+    background-color: #1a1a2e;
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode #addTaskBtn {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+body.dark-mode #addTaskBtn:hover {
+    background-color: #5568d3;
+    border-color: #5568d3;
+}
+
+body.dark-mode .btn-outline-secondary {
+    color: #e4e4e4;
+    border-color: #533483;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+    background-color: #533483;
+    border-color: #533483;
+    color: #e4e4e4;
+}
+
 /* Responsive adjustments */
 @media (max-width: 576px) {
     .container {
