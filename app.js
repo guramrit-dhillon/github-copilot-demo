@@ -14,7 +14,7 @@ let tasks = [];
  * Load dark mode preference from localStorage
  */
 function loadDarkModePreference() {
-    const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
+    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
     if (darkModeEnabled) {
         document.body.classList.add('dark-mode');
         darkModeToggle.textContent = '☀️';
@@ -32,13 +32,8 @@ function toggleDarkMode() {
     const isDarkMode = document.body.classList.contains('dark-mode');
     
     // Save preference to localStorage
-    if (isDarkMode) {
-        localStorage.setItem('darkMode', 'enabled');
-        darkModeToggle.textContent = '☀️';
-    } else {
-        localStorage.setItem('darkMode', 'disabled');
-        darkModeToggle.textContent = '🌙';
-    }
+    localStorage.setItem('darkMode', isDarkMode.toString());
+    darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
 }
 
 /**
